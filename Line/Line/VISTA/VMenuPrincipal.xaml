@@ -1,0 +1,100 @@
+﻿<Window x:Class="Line.VISTA.VMenuPrincipal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Line.VISTA"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="VMenuPrincipal" 
+        Height="600" 
+        Width="1024"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        Background="Transparent"
+        BorderBrush="{x:Null}"
+        Margin="0 0 0 0"
+        Padding="0 0 0 0">
+    <Grid Background="#FFF">
+        <StackPanel VerticalAlignment="Top">
+            <Grid Background="#FF0069C0" Height="10"></Grid>
+            <Grid Margin="5">
+                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Margin="10 0 0 10">
+                    <Label Content="Bienvenido a TIMELINE" VerticalAlignment="Center" FontSize="20" FontFamily="Champagne &amp; Limousines" Margin="20 3"></Label>
+                    <Button x:Name="btnFacebook" Width="30" Height="30" Background="{x:Null}" Margin="10 10 0 10" BorderBrush="{x:Null}" Padding="0" Foreground="Gray">
+                        <materialDesign:PackIcon Kind="Facebook" Width="30" Height="30" Margin="0 0 0 0" Padding="0"></materialDesign:PackIcon>
+                    </Button>
+                    <Button x:Name="btnTwitter" Width="30" Height="30" Background="{x:Null}" Margin="10 10 0 10" BorderBrush="{x:Null}" Padding="0" Foreground="Gray">
+                        <materialDesign:PackIcon Kind="Twitter" Width="30" Height="30" Margin="0 0 0 0" Padding="0"></materialDesign:PackIcon>
+                    </Button>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button x:Name="btnNotification" Width="30" Height="30" Background="{x:Null}" Margin="10 10 0 10" BorderBrush="{x:Null}" Padding="0" Foreground="Gray">
+                        <materialDesign:PackIcon Kind="BellOutline" Width="30" Height="30" Margin="0 0 0 0" Padding="0"></materialDesign:PackIcon>
+                    </Button>
+                    <Button x:Name="btnOnOff" Width="30" Height="30" Background="{x:Null}" Margin="10 10 0 10" BorderBrush="{x:Null}" Padding="0" Foreground="Gray">
+                        <materialDesign:PackIcon Kind="Power" Width="30" Height="30" Margin="0 0 0 0" Padding="0"></materialDesign:PackIcon>
+                    </Button>
+                    <Button x:Name="btnAcount" Width="30" Height="30" Background="{x:Null}" Margin="10 10 0 10" BorderBrush="{x:Null}" Padding="0" Foreground="Gray">
+                        <materialDesign:PackIcon Kind="User" Width="30" Height="30" Margin="0 0 0 0" Padding="0"></materialDesign:PackIcon>
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+        <Grid Background="#FF1B3861" Width="246" HorizontalAlignment="Left" Margin="0 10 0 0">
+            <!--modificar margin si en caso el diseño no funcione-->
+            <ListView x:Name="ListViewMenu" Background="Black" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Margin="0 0 0 0" Foreground="LightGray" FontFamily="Champagne &amp; Limousines" FontSize="18" SelectedIndex="0">
+                
+                <ListViewItem x:Name="ListViewHome" Height="60" Margin="0 0 0 0" Padding="0" Selected="ListViewHome_Selected">
+                    <StackPanel Orientation="Horizontal" Width="235" Margin="5 5 5 5">
+                        <materialDesign:PackIcon Kind="Menu" Width="30" Height="30" Margin="10 10 0 10" VerticalAlignment="Center" > </materialDesign:PackIcon>
+                        <Label Content="Inicio" Foreground="#FFF" FontSize="17" Margin="10 0 0 0" VerticalAlignment="Center"></Label>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem x:Name="ListViewEmpresa" Height="60" Margin="0 0 0 0" Padding="0" Selected="ListViewEmpresa_Selected">
+                    <StackPanel Orientation="Horizontal" Width="235" Margin="5 5 5 5">
+                        <materialDesign:PackIcon Kind="Company" Width="30" Height="30" Margin="10 10 0 10" VerticalAlignment="Center" ></materialDesign:PackIcon>
+                        <Label Content="Empresas" Foreground="#FFF" FontSize="17" Margin="10 0 0 0" VerticalAlignment="Center"></Label>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem x:Name="ListViewCalendario" Height="60" Margin="0 0 0 0" Padding="0" Selected="ListViewCalendario_Selected">
+                    <StackPanel Orientation="Horizontal" Width="235" Margin="5 5 5 5">
+                        <materialDesign:PackIcon Kind="EventAdd" Width="30" Height="30" Margin="10 10 0 10" VerticalAlignment="Center" ></materialDesign:PackIcon>
+                        <Label Content="Mi calendario" Foreground="#FFF" FontSize="17" Margin="10 0 0 0" VerticalAlignment="Center"></Label>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem x:Name="ListViewProyecto" Height="60" Margin="0 0 0 0" Padding="0" Selected="ListViewProyecto_Selected">
+                    <StackPanel Orientation="Horizontal" Width="235" Margin="5 5 5 5">
+                        <materialDesign:PackIcon Kind="Folders" Width="30" Height="30" Margin="10 10 0 10" VerticalAlignment="Center" ></materialDesign:PackIcon>
+                        <Label Content="Proyectos" Foreground="#FFF" FontSize="17" Margin="10 0 0 0" VerticalAlignment="Center"></Label>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem x:Name="ListViewContactos" Height="60" Margin="0 0 0 0" Padding="0" Selected="ListViewContactos_Selected">
+                    <StackPanel Orientation="Horizontal" Width="235" Margin="5 5 5 5">
+                        <materialDesign:PackIcon Kind="Contacts" Width="30" Height="30" Margin="10 10 0 10" VerticalAlignment="Center" ></materialDesign:PackIcon>
+                        <Label Content="Contactos" Foreground="#FFF" FontSize="17" Margin="10 0 0 0" VerticalAlignment="Center"></Label>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem x:Name="ListViewRecursohumanos" Height="60" Margin="0 0 0 0" Padding="0" Selected="ListViewRecursohumanos_Selected">
+                    <StackPanel Orientation="Horizontal" Width="235" Margin="5 5 5 5">
+                        <materialDesign:PackIcon Kind="Users" Width="30" Height="30" Margin="10 10 0 10" VerticalAlignment="Center" ></materialDesign:PackIcon>
+                        <Label Content="Recursos humanos" Foreground="#FFF" FontSize="17" Margin="10 0 0 0" VerticalAlignment="Center"></Label>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem x:Name="ListViewAjustes" Height="60" Margin="0 0 0 0" Padding="0" Selected="ListViewAjustes_Selected">
+                    <StackPanel Orientation="Horizontal" Width="235" Margin="5 5 5 5">
+                        <materialDesign:PackIcon Kind="Settings" Width="30" Height="30" Margin="10 10 0 10" VerticalAlignment="Center" ></materialDesign:PackIcon>
+                        <Label Content="Configuraciones" Foreground="#FFF" FontSize="17" Margin="10 0 0 0" VerticalAlignment="Center"></Label>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem x:Name="ListViewRequerimientos" Height="60" Margin="0 0 0 0" Padding="0" Selected="ListViewRequerimientos_Selected">
+                    <StackPanel Orientation="Horizontal" Width="235" Margin="5 5 5 5">
+                        <materialDesign:PackIcon Kind="Settings" Width="30" Height="30" Margin="10 10 0 10" VerticalAlignment="Center" ></materialDesign:PackIcon>
+                        <Label Content="Requerimientos" Foreground="#FFF" FontSize="17" Margin="10 0 0 0" VerticalAlignment="Center"></Label>
+                    </StackPanel>
+                </ListViewItem>
+            </ListView>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,58 @@
+﻿<Window x:Class="Line.VISTA.VLogin"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Line.VISTA"
+        mc:Ignorable="d"
+        Title="VLogin" 
+        Height="500" 
+        Width="350" 
+        WindowStyle="None"
+        Background="#FFF"
+        AllowsTransparency="true" 
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Rectangle Height="280" VerticalAlignment="Top">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF0361B0"/>
+                    <GradientStop Color="#FFEAEAEC" Offset="1"/>
+                    <GradientStop Color="#FF33288B" Offset="0.546"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle Width="280" Height="240" VerticalAlignment="Bottom" Margin="36,0,34,92" RadiusY="10" RadiusX="10" Fill="White">
+            <Rectangle.Effect>
+                <DropShadowEffect BlurRadius="15" Direction="0" RenderingBias="Quality" ShadowDepth="1" Color="#FFBBBBBB"/>
+            </Rectangle.Effect>
+        </Rectangle>
+        <Grid VerticalAlignment="Bottom" Margin="35,0,35,44" Height="276">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="257*"/>
+                <ColumnDefinition Width="17*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Inicio de sessión" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="64,5,54.5,0" Foreground="Gray" FontSize="18" Grid.Column="2"/>
+            <StackPanel VerticalAlignment="Center" Margin="9,50,15,72" Height="154" Grid.Column="2" Grid.ColumnSpan="2">
+                <TextBox x:Name="txtUsuario" Margin="0,5" materialDesign:HintAssist.Hint="Nombre de usuario" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="18"/>
+                <PasswordBox  x:Name="txtPass" Margin="0,5" materialDesign:HintAssist.Hint="Contraseña" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" FontFamily="Champagne &amp; Limousines" FontSize="18"/>
+                <!--<ComboBox x:Name="cmbItems" Margin="0 5 -5 5" Padding="0 -10 20 10" materialDesign:HintAssist.Hint="Seleccione el usuario" Style="{StaticResource MaterialDesignFloatingHintComboBox}" VerticalAlignment="Bottom" Width="240" Foreground="Gray" Cursor="Hand" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" FontFamily="{DynamicResource {x:Static SystemFonts.CaptionFontFamilyKey}}">
+                    <ComboBoxItem Width="250">Usuario</ComboBoxItem>
+                    <ComboBoxItem>Administrativo</ComboBoxItem>
+                    <ComboBoxItem>Gerente</ComboBoxItem>
+                    <ComboBoxItem>Recursos humanos</ComboBoxItem>
+                    <ComboBoxItem>Director General</ComboBoxItem>
+                </ComboBox>-->
+            </StackPanel>
+            <Button x:Name="btnEntrar" Click="btnEntrar_Click" IsDefault="True" Width="141" BorderBrush="{x:Null}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="131,0,1,0" Content="Entrar" Grid.Column="2" Grid.ColumnSpan="2"/>
+            <Button x:Name="btnCancelar" IsDefault="True" Width="131" BorderBrush="{x:Null}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="1,0,131.5,0" Content="Cancelar" Background="Red" Grid.ColumnSpan="3"/>
+        </Grid>
+        <!--<TextBlock Text="Registrar" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="217,0,85,22" Foreground="Gray" Cursor="Hand"/>-->
+        <!--Source="Imagenes/Interdev.png"-->
+        <Image Width="1000" Height="100" VerticalAlignment="Top" Margin="30"/>
+    </Grid>
+</Window>

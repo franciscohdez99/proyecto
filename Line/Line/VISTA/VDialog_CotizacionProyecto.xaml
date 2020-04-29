@@ -1,0 +1,84 @@
+﻿<Window x:Class="Line.VISTA.VDialog_CotizacionProyecto"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Line.VISTA"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="VDialog_CotizacionProyecto"
+        Height="455" 
+        Width="800" 
+        ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen" 
+        Padding="0 0 0 0" 
+        WindowStyle="None" 
+        Margin="0 0 0 0"
+        Background="Transparent">
+    <Grid>
+        <Grid Name="myGrids" Background="#FF1368BD">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"></RowDefinition>
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <Label Content="Registro de actividades" Foreground="#FFF" FontSize="14" FontWeight="Bold" Margin="10 10 10 10" ></Label>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button x:Name="btnCerrar" Width="30" Height="30" materialDesign:ShadowAssist.ShadowDepth="Depth1" Padding="0" Margin="5 5 5 5" Background="Red" BorderBrush="{x:Null}">
+                    <materialDesign:PackIcon Kind="WindowClose" HorizontalAlignment="Right"/>
+                </Button>
+            </StackPanel>
+        </Grid>
+        <Grid Name="myGrid" Margin="0 50 0 0" Background="LightGray" Height="392">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+
+            <materialDesign:PackIcon Kind="Key" Foreground="{Binding ElementName=txtIdCotizacion, Path=BorderBrush}" VerticalAlignment="Bottom" Margin="10 4" Grid.Column="0" Grid.Row="0"></materialDesign:PackIcon>
+            <TextBox x:Name="txtIdCotizacion" Grid.Column="0" Grid.Row="0" Width="300" materialDesign:HintAssist.Hint="ID Cotización" Margin="0 6" materialDesign:HintAssist.IsFloating="True"></TextBox>
+
+            
+            <materialDesign:PackIcon Kind="Folder" Foreground="{Binding ElementName=cmbProyecto, Path=BorderBrush}" VerticalAlignment="Bottom" Margin="10 4" Grid.Column="0" Grid.Row="1"></materialDesign:PackIcon>
+           
+            <ComboBox x:Name="cmbProyecto" Grid.Column="0" Grid.Row="1" Width="300" materialDesign:HintAssist.Hint="Elige un proyecto" Margin="0 6" materialDesign:HintAssist.IsFloating="True">
+                <ComboBoxItem></ComboBoxItem>
+            </ComboBox>
+
+            <materialDesign:PackIcon Kind="MaterialUi" Foreground="{Binding ElementName=txtRecurso, Path=BorderBrush}" VerticalAlignment="Bottom" Margin="10 4" Grid.Column="0" Grid.Row="2"></materialDesign:PackIcon>
+            <TextBox x:Name="txtRecurso" Grid.Column="0" Grid.Row="2" Width="300" materialDesign:HintAssist.Hint="Recurso" Margin="0 6" materialDesign:HintAssist.IsFloating="True"></TextBox>
+
+
+            <materialDesign:PackIcon Kind="ElevationDecline" Foreground="{Binding ElementName=txtCantidad, Path=BorderBrush}" VerticalAlignment="Bottom" Margin="10 4" Grid.Column="0" Grid.Row="3"></materialDesign:PackIcon>
+            <TextBox x:Name="txtCantidad" Grid.Column="0" Grid.Row="3" Width="300" materialDesign:HintAssist.Hint="Cantidad" Margin="0 6" materialDesign:HintAssist.IsFloating="True"></TextBox>
+
+            <materialDesign:PackIcon Kind="Money" Foreground="{Binding ElementName=txtCostoUnitario, Path=BorderBrush}" VerticalAlignment="Bottom" Margin="10 4" Grid.Column="1" Grid.Row="0"></materialDesign:PackIcon>
+            <TextBox x:Name="txtCostoUnitario" Grid.Column="1" Grid.Row="0" Width="300" materialDesign:HintAssist.Hint="Costo unitario" Margin="0 6" materialDesign:HintAssist.IsFloating="True"></TextBox>
+
+            <materialDesign:PackIcon Kind="MoneyUsd" Foreground="{Binding ElementName=txtTotal, Path=BorderBrush}" VerticalAlignment="Bottom" Margin="10 4" Grid.Column="1" Grid.Row="1"></materialDesign:PackIcon>
+            <TextBox x:Name="txtTotal" Grid.Column="1" Grid.Row="1" Width="300" materialDesign:HintAssist.Hint="Total" Margin="0 6" materialDesign:HintAssist.IsFloating="True"></TextBox>
+
+            <materialDesign:PackIcon Kind="MoneyUsd" Foreground="{Binding ElementName=txtFinalTotal, Path=BorderBrush}" VerticalAlignment="Bottom" Margin="10 4" Grid.Column="1" Grid.Row="2"></materialDesign:PackIcon>
+            <TextBox x:Name="txtFinalTotal" Grid.Column="1" Grid.Row="2" Width="300" materialDesign:HintAssist.Hint="Monto total" Margin="0 6" materialDesign:HintAssist.IsFloating="True"></TextBox>
+
+            <Button x:Name="btnGuardar" Background="#0069D9" Content="Guardar" Grid.Column="1" Grid.Row="6" Width="100" Height="30" HorizontalAlignment="Left" Margin="170 10 15 0" BorderBrush="{x:Null}"></Button>
+            <Button x:Name="btnCancelar" Background="#5A6268" Content="Cancelar" Grid.Column="1" Grid.Row="6" Width="100" Height="30" HorizontalAlignment="Right" Margin="0 10 15 0" BorderBrush="{x:Null}"></Button>
+
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E2AD1C3A-C6CB-4F9C-A6A4-95FDFD2B5262}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Line</RootNamespace>
+    <AssemblyName>Line</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MaterialDesignColors, Version=1.2.2.920, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.1.2.2\lib\net45\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=3.0.1.920, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.3.0.1\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="CONTROLADOR\CDialog_Eliminar.cs" />
+    <Compile Include="CONTROLADOR\CLogin.cs" />
+    <Compile Include="CONTROLADOR\CMain.cs" />
+    <Compile Include="CONTROLADOR\CPrincipal.cs" />
+    <Compile Include="CONTROLADOR\C_Actividad.cs" />
+    <Compile Include="CONTROLADOR\C_AsignResProyecto.cs" />
+    <Compile Include="CONTROLADOR\C_Cliente.cs" />
+    <Compile Include="CONTROLADOR\C_CotizacionProyecto.cs" />
+    <Compile Include="CONTROLADOR\C_DialogActividad.cs" />
+    <Compile Include="CONTROLADOR\C_DialogAsignResProyecto.cs" />
+    <Compile Include="CONTROLADOR\C_DialogCliente.cs" />
+    <Compile Include="CONTROLADOR\C_DialogCotizacionProyecto.cs" />
+    <Compile Include="CONTROLADOR\C_DialogEmpresa.cs" />
+    <Compile Include="CONTROLADOR\C_DialogHorarioTrabajo.cs" />
+    <Compile Include="CONTROLADOR\C_DialogOrganigrama.cs" />
+    <Compile Include="CONTROLADOR\C_DialogProyecto.cs" />
+    <Compile Include="CONTROLADOR\C_DialogSucursal.cs" />
+    <Compile Include="CONTROLADOR\C_Empresa.cs" />
+    <Compile Include="CONTROLADOR\C_HorarioTrabajo.cs" />
+    <Compile Include="CONTROLADOR\C_Organigrama.cs" />
+    <Compile Include="CONTROLADOR\C_Proyecto.cs" />
+    <Compile Include="CONTROLADOR\C_Sucursal.cs" />
+    <Compile Include="MODELO\DAO_Actividad.cs" />
+    <Compile Include="MODELO\DAO_AsignacionResponsablesProyectos.cs" />
+    <Compile Include="MODELO\DAO_Cliente.cs" />
+    <Compile Include="MODELO\DAO_CotizacionProyecto.cs" />
+    <Compile Include="MODELO\DAO_Empresa.cs" />
+    <Compile Include="MODELO\DAO_HorarioTrabajo.cs" />
+    <Compile Include="MODELO\DAO_Organigrama.cs" />
+    <Compile Include="MODELO\DAO_Proyecto.cs" />
+    <Compile Include="MODELO\DAO_Sucursal.cs" />
+    <Compile Include="MODELO\DAO_Usuario.cs" />
+    <Compile Include="MODELO\MConexion.cs" />
+    <Compile Include="MODELO\VO_Actividad.cs" />
+    <Compile Include="MODELO\VO_AsignacionResponsablesProyectos.cs" />
+    <Compile Include="MODELO\VO_Cliente.cs" />
+    <Compile Include="MODELO\VO_CotizacionProyecto.cs" />
+    <Compile Include="MODELO\VO_Empresa.cs" />
+    <Compile Include="MODELO\VO_HorarioTrabajo.cs" />
+    <Compile Include="MODELO\VO_Organigrama.cs" />
+    <Compile Include="MODELO\VO_Proyecto.cs" />
+    <Compile Include="MODELO\VO_Sucursal.cs" />
+    <Compile Include="MODELO\VO_Usuario.cs" />
+    <Compile Include="VISTA\VDialog_Actividad.xaml.cs">
+      <DependentUpon>VDialog_Actividad.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\VDialog_AsignPersonalProyecto.xaml.cs">
+      <DependentUpon>VDialog_AsignPersonalProyecto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\VDialog_Cliente.xaml.cs">
+      <DependentUpon>VDialog_Cliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\VDialog_CotizacionProyecto.xaml.cs">
+      <DependentUpon>VDialog_CotizacionProyecto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\VDialog_Eliminar.xaml.cs">
+      <DependentUpon>VDialog_Eliminar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\VDialog_Empresa.xaml.cs">
+      <DependentUpon>VDialog_Empresa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\VDialog_Organigrama.xaml.cs">
+      <DependentUpon>VDialog_Organigrama.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\VDialog_Proyecto.xaml.cs">
+      <DependentUpon>VDialog_Proyecto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\VDialog_Sucursal.xaml.cs">
+      <DependentUpon>VDialog_Sucursal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\VLogin.xaml.cs">
+      <DependentUpon>VLogin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\VMenuContactos.xaml.cs">
+      <DependentUpon>VMenuContactos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\VMenuOrganizaciones.xaml.cs">
+      <DependentUpon>VMenuOrganizaciones.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\VMenuPrincipal.xaml.cs">
+      <DependentUpon>VMenuPrincipal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\VMenuProyectos.xaml.cs">
+      <DependentUpon>VMenuProyectos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\VPrincipal.xaml.cs">
+      <DependentUpon>VPrincipal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\V_Actividad.xaml.cs">
+      <DependentUpon>V_Actividad.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\V_AsignacionResponsablesProyectos.xaml.cs">
+      <DependentUpon>V_AsignacionResponsablesProyectos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\V_Cliente.xaml.cs">
+      <DependentUpon>V_Cliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\V_CotizacionProyecto.xaml.cs">
+      <DependentUpon>V_CotizacionProyecto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\V_DialogHorarioTrabajo.xaml.cs">
+      <DependentUpon>V_DialogHorarioTrabajo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\V_Empresa.xaml.cs">
+      <DependentUpon>V_Empresa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\V_HorarioTrabajo.xaml.cs">
+      <DependentUpon>V_HorarioTrabajo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\V_Organigrama.xaml.cs">
+      <DependentUpon>V_Organigrama.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\V_Proyecto.xaml.cs">
+      <DependentUpon>V_Proyecto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\V_Sucursal.xaml.cs">
+      <DependentUpon>V_Sucursal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="VISTA\VDialog_Actividad.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VISTA\VDialog_AsignPersonalProyecto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VISTA\VDialog_Cliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VISTA\VDialog_CotizacionProyecto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VISTA\VDialog_Eliminar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VISTA\VDialog_Empresa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VISTA\VDialog_Organigrama.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VISTA\VDialog_Proyecto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VISTA\VDialog_Sucursal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VISTA\VLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VISTA\VMenuContactos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VISTA\VMenuOrganizaciones.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VISTA\VMenuPrincipal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VISTA\VMenuProyectos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VISTA\VPrincipal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VISTA\V_Actividad.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VISTA\V_AsignacionResponsablesProyectos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VISTA\V_Cliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VISTA\V_CotizacionProyecto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VISTA\V_DialogHorarioTrabajo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VISTA\V_Empresa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VISTA\V_HorarioTrabajo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VISTA\V_Organigrama.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VISTA\V_Proyecto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VISTA\V_Sucursal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\MaterialDesignThemes.3.0.1\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.3.0.1\build\MaterialDesignThemes.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MaterialDesignThemes.3.0.1\build\MaterialDesignThemes.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MaterialDesignThemes.3.0.1\build\MaterialDesignThemes.targets'))" />
+  </Target>
+</Project>

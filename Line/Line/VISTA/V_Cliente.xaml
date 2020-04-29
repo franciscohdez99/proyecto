@@ -1,0 +1,114 @@
+﻿<Window x:Class="Line.VISTA.V_Cliente"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Line.VISTA"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="V_Cliente"
+        Height="455" 
+        Width="800" 
+        ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen" 
+        Padding="0 0 0 0" 
+        WindowStyle="None" 
+        Background="#FFF">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"></ColumnDefinition>
+
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="10"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="75"></RowDefinition>
+            <RowDefinition Height="75"></RowDefinition>
+            <RowDefinition Height="75"></RowDefinition>
+            <RowDefinition ></RowDefinition>
+        </Grid.RowDefinitions>
+        <!--inicio de color de fondo-->
+        <Label x:Name="lblGridColum0" Background="#FF1368BD" Padding="0" Grid.Column="0" Grid.Row="0" BorderBrush="{x:Null}"></Label>
+        <Label x:Name="lblGridColum1" Background="#FF1368BD" Padding="0" Grid.Column="1" Grid.Row="0" BorderBrush="{x:Null}"></Label>
+        <Label x:Name="lblGridColum2" Background="#FF1368BD" Padding="0" Grid.Column="2" Grid.Row="0" BorderBrush="{x:Null}"></Label>
+        <!--finaliza color de fondo-->
+        <Label x:Name="lblTitulo" 
+               Content="Lista de registro de clientes" 
+               Foreground="#FFF" 
+               Background="Transparent" 
+               FontSize="14" 
+               FontWeight="Bold" 
+               Padding="5 5 5 5" 
+               Margin="10 5 550 0" 
+               Grid.Column="1" 
+               Grid.Row="0">
+        </Label>
+        <Button x:Name="btnCloseWindow"
+                Content="X" 
+                Grid.Column="1" 
+                Grid.Row="0" 
+                HorizontalAlignment="Right"
+                Background="Red" 
+                BorderBrush="{x:Null}" 
+                Margin="0 5 0 0" 
+                Padding="0 0 0 0" Width="30" 
+                Height="30">
+        </Button>
+        <TextBox x:Name="txtBuscar"
+                 Background="LightGray" 
+                 HorizontalAlignment="Left"
+                 Grid.Column="1"
+                 Grid.Row="3"
+                 Width="435"
+                 Height="30"
+                 Margin="10 40 0 0"
+                 Padding="5 -5 0 0"
+                 BorderBrush="{x:Null}"
+                 materialDesign:HintAssist.Hint="Buscar..." materialDesign:HintAssist.IsFloating="True">
+        </TextBox>
+        <Button x:Name="btnNuevo" 
+                Content="Nuevo"
+                Background="Green" 
+                BorderBrush="{x:Null}"
+                HorizontalAlignment="Stretch"
+                Grid.Column="1" 
+                Grid.Row="3" 
+                Width="100" 
+                Margin="450 0 225 -40">
+        </Button>
+        <Button x:Name="btnEditar" 
+                Content="Editar"
+                Background="Orange" 
+                BorderBrush="{x:Null}"
+                HorizontalAlignment="Stretch"
+                Grid.Column="1" 
+                Grid.Row="3" 
+                Width="100" 
+                Margin="450 0 10 -40">
+        </Button>
+        <Button x:Name="btnEliminar" 
+                Content="Eliminar"
+                Background="Red" 
+                BorderBrush="{x:Null}"
+                HorizontalAlignment="Right"
+                Grid.Column="1" 
+                Grid.Row="3" 
+                Width="100" 
+                Margin="0 0 10 -40">
+        </Button>
+
+        <DataGrid x:Name="DgvPlantilla" Margin="10 10 10 10" ItemsSource="{Binding}" AutoGenerateColumns="False" Grid.Column="1" Grid.Row="4">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="txtIdCliente" Header="Id"  Binding="{Binding Path=idcliente}"/>
+                <DataGridTextColumn x:Name="txtNombreCliente" Header="Nombre del cliente" Binding="{Binding Path=nombrecliente}"/>
+                <DataGridTextColumn x:Name="txtApaterno" Header="Apellido paterno" Binding="{Binding Path=apaterno}" />
+                <DataGridTextColumn x:Name="txtAmaterno" Header="Apellido materno" Binding="{Binding Path=amaterno}" />
+                <DataGridTextColumn x:Name="txtNumeroTelefono" Header="Número de telefono" Binding="{Binding Path=numerotelefono}" />
+                <DataGridTextColumn x:Name="txtEmail" Header="Email" Binding="{Binding Path=email}" />
+                
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
